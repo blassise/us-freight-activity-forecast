@@ -39,3 +39,20 @@ The Augmented Dickey-Fuller test produced:
 | p-value | 0.7681 |
 
 Because the p-value is greater than 0.05, the original Freight TSI series was considered non-stationary.
+## First-Order Differencing
+
+Because the original series was non-stationary, first-order differencing was applied to remove the long-term trend.
+
+![First-Order Differenced Freight TSI](freight_tsi_first_difference.png)
+
+After differencing, the series fluctuates around zero with no clear long-term trend.
+
+A second Augmented Dickey-Fuller test produced:
+
+| Metric | Result |
+|---|---:|
+| ADF Statistic | -10.8589 |
+| p-value | < 0.001 |
+
+The results confirm that the differenced series is stationary and ready for time series modeling.
+
