@@ -106,3 +106,5 @@ The SARIMA forecasts remained close to the actual Freight TSI values during the 
 
 Combined with a MAPE of **0.92%**, the results show that the model can provide accurate short-term forecasts of U.S. freight activity.
 
+![SARIMA Forecast vs Actual Freight TSI](sarima_forecast_vs_actual.png)
+
