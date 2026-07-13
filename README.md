@@ -56,3 +56,13 @@ A second Augmented Dickey-Fuller test produced:
 
 The results confirm that the differenced series is stationary and ready for time series modeling.
 
+## Train-Test Split
+
+The data was divided into training and testing periods to evaluate the model on unseen observations.
+
+| Dataset | Period | Observations |
+|---|---|---:|
+| Training | January 2000 – December 2025 | 312 |
+| Testing | January 2026 – May 2026 | 5 |
+
+The model was trained using the historical data and then used to forecast the five months in the testing period. The predictions were compared with the actual Freight TSI values to measure forecast accuracy.
