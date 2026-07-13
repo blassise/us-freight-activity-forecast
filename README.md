@@ -22,3 +22,20 @@ The date field was converted to a datetime format and used as the time-series in
 The dataset contains monthly Freight Transportation Services Index observations from January 2000 through May 2026. The historical series shows long-term growth in U.S. freight activity, along with periods of significant disruption and recovery.
 
 ![Historical U.S. Freight Transportation Services Index](freight_tsi_history.png)
+
+## Stationarity Analysis
+
+Before building the forecasting model, the series was tested to determine whether its average level remained stable over time.
+
+![Freight TSI and 12-Month Rolling Mean](freight_tsi_rolling_mean.png)
+
+The rolling mean changes throughout the observation period, showing that the original series contains a long-term trend.
+
+The Augmented Dickey-Fuller test produced:
+
+| Metric | Result |
+|---|---:|
+| ADF Statistic | -0.9585 |
+| p-value | 0.7681 |
+
+Because the p-value is greater than 0.05, the original Freight TSI series was considered non-stationary.
