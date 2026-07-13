@@ -66,3 +66,22 @@ The data was divided into training and testing periods to evaluate the model on 
 | Testing | January 2026 – May 2026 | 5 |
 
 The model was trained using the historical data and then used to forecast the five months in the testing period. The predictions were compared with the actual Freight TSI values to measure forecast accuracy.
+
+## SARIMA Forecasting Model
+
+A SARIMA model was used because the Freight TSI is monthly time series data and may contain both short-term and seasonal patterns.
+
+The model configuration was:
+
+- Non-seasonal order: `(1, 1, 1)`
+- Seasonal order: `(1, 1, 1, 12)`
+- Seasonal period: `12 months`
+
+```python
+sarima_model = SARIMAX(
+    train,
+    order=(1, 1, 1),
+    seasonal_order=(1, 1, 1, 12)
+)
+
+sarima_results = sarima_model.fit()
