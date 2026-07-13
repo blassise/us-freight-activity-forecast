@@ -85,6 +85,7 @@ sarima_model = SARIMAX(
 )
 
 sarima_results = sarima_model.fit()
+```
 
 ## Model Evaluation
 
@@ -105,6 +106,3 @@ The model produced accurate short-term forecasts, with an average percentage err
 The SARIMA forecasts remained close to the actual Freight TSI values during the testing period. The model slightly underestimated the increase in March and April 2026, but all actual observations remained within the 95% confidence interval.
 
 Combined with a MAPE of **0.92%**, the results show that the model can provide accurate short-term forecasts of U.S. freight activity.
-
-![SARIMA Forecast vs Actual Freight TSI](sarima_forecast_vs_actual.png)
-
